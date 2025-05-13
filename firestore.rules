@@ -1,0 +1,38 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /students/{uid} {
+      allow read:   if request.auth.uid == uid || request.auth.token.role == 'admin';
+      allow write:  if request.auth.token.role == 'admin';
+    }
+
+    match /subjects/{docId} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+    match /grades/{gradeId} {
+      // Любой залогиненный пользователь может создавать оценки:
+      allow create: if request.auth.uid != null;
+      // Чтение: студент видит свои, админ видит все
+      allow read:   if request.auth.uid == resource.data.studentUid
+                     || request.auth.token.role == 'admin';
+      allow update, delete: if request.auth.token.role == 'admin';
+    }
+
+    match /groups/{groupId} {
+      allow read:  if true;
+      allow write: if false;
+    }
+
+    match /admins/{docId} {
+      allow read:  if true;
+      allow write: if false;
+    }
+    match /teachers/{uid} {
+      allow read:  if true;
+      allow write: if false;
+    }
+  }
+}

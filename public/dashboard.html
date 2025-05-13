@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GradleBook — Личный кабинет</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="dashboard">
+    <header>
+      <h1>GradleBook</h1>
+      <div id="user-info">
+        Привет, <span id="user-name"></span>!<br>
+        Группа: <span id="user-group"></span>
+      </div>
+      <button id="logoutBtn">Выйти</button>
+    </header>
+
+    <nav>
+      <button class="nav-btn active">Успеваемость</button>
+      <button class="nav-btn">Расписание</button>
+      <button class="nav-btn">Уведомления</button>
+    </nav>
+
+    <main>
+      <section id="grades-section">
+        <h2>Текущая успеваемость</h2>
+        <table id="grades-table">
+          <thead>
+            <tr>
+              <th>Дисциплина</th>
+              <th>Тип</th>
+              <th>Оценка</th>
+              <th>Дата</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Данные подгрузятся через JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="js/config.js"></script>
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

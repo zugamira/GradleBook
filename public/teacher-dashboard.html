@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GradleBook — Кабинет преподавателя</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="teacher-container">
+    <h1>Кабинет преподавателя</h1>
+
+    <div class="filter-group">
+      <label for="group-select">Группа:</label>
+      <select id="group-select" class="form-control"><option value="">—</option></select>
+
+      <label for="subject-select">Дисциплина:</label>
+      <select id="subject-select" class="form-control"><option value="">—</option></select>
+    </div>
+
+    <h2>Семестр 1</h2>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ФИО</th><th>Номер</th>
+            <th>Экзамен</th><th>Зачёт</th><th>Дифф.зачёт</th><th>Собесед.</th>
+            <th>Курсовая</th><th>Контрольная</th><th>Реферат</th>
+          </tr>
+        </thead>
+        <tbody id="grades-sem1"></tbody>
+      </table>
+    </div>
+
+    <h2>Семестр 2</h2>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>ФИО</th><th>Номер</th>
+            <th>Экзамен</th><th>Зачёт</th><th>Дифф.зачёт</th><th>Собесед.</th>
+            <th>Курсовая</th><th>Контрольная</th><th>Реферат</th>
+          </tr>
+        </thead>
+        <tbody id="grades-sem2"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script type="module" src="/js/config.js"></script>
+  <script type="module" src="/js/teacher-dashboard.js"></script>
+</body>
+</html>

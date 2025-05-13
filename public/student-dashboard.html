@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Кабинет студента</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="dashboard">
+  <h1>Добро пожаловать, <span id="student-name"></span>!</h1>
+  <button id="logout" class="nav-btn">Выйти</button>
+
+  <h2>Семестр 1</h2>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Дисциплина</th>
+          <th>Зачёт</th>
+          <th>Экзамен</th>
+          <th>Дифф. зачет</th>
+          <th>Собеседование</th>
+          <th>Курсовая</th>
+          <th>Тест</th>
+          <th>Эссе</th>
+        </tr>
+      </thead>
+      <tbody id="grades-sem1"></tbody>
+    </table>
+  </div>
+
+  <h2>Семестр 2</h2>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Дисциплина</th>
+          <th>Зачёт</th>
+          <th>Экзамен</th>
+          <th>Дифф. зачет</th>
+          <th>Собеседование</th>
+          <th>Курсовая</th>
+          <th>Тест</th>
+          <th>Эссе</th>
+        </tr>
+      </thead>
+      <tbody id="grades-sem2"></tbody>
+    </table>
+  </div>
+
+  <script type="module" src="js/student-dashboard.js"></script>
+</body>
+</html>

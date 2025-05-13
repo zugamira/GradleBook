@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GradleBook — Админ-панель</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/papaparse@5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="admin-container"> 
+    <h1>Админ-панель GradleBook</h1>
+
+    <section class="form-section"> <!-- Добавлен класс -->
+      <h2>Добавить студента</h2>
+      <form id="single-student-form" class="grid-form"> 
+        <label>ФИО
+          <input type="text" id="adm-name" required>
+        </label>
+        <label>Номер зачётки
+          <input type="text" id="adm-number" required>
+        </label>
+        <label>Группа (ID)
+          <input type="text" id="adm-group" required>
+        </label>
+        <label>Пароль
+          <input type="password" id="adm-pass" required>
+        </label>
+        <button type="submit" class="btn-primary">Создать</button>
+        <div id="single-result" class="result"></div>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>Массовая загрузка студентов</h2>
+      <div class="file-upload">
+        <input type="file" id="csv-file" accept=".csv,.xlsx">
+        <button id="bulk-upload-btn" class="btn-secondary">Загрузить</button>
+      </div>
+      <div id="bulk-result" class="result"></div>
+    </section>
+
+    <button id="admin-logout" class="logout-btn">Выйти</button>
+  </div>
+
+  <script type="module" src="../js/config.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
+</html>
